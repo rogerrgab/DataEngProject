@@ -22,43 +22,50 @@ Opção A: Execução Automática (Recomendado)
 
 Se você já tem o Python e o PostgreSQL configurados, basta rodar o script de setup correspondente ao seu sistema:
 
-    Linux (Fedora/Debian/Ubuntu/Mint):
-    Bash
-
+Linux (Fedora/Debian/Ubuntu/Mint):
+    
+```bash
     chmod +x setup_linux.sh
-    ./setup_linux.sh
+```
 
-    Windows: Execute o arquivo setup_windows.bat com um clique duplo.
+```bash
+    ./setup_linux.sh
+``` 
+
+Windows: Execute o arquivo setup_windows.bat com um clique duplo.
 
 Opção B: Execução Manual (Passo a Passo)
 
-    Instalar Dependências:
-    Bash
+Instalar Dependências:
 
+```bash
     pip install -r requirements.txt
+```
 
-    Popular o Banco de Dados:
-    Bash
+Adicionar nomes de alunos ao Banco de Dados:
 
+```bash
     python scripts/popular_banco.py
+```
+Executar o Pipeline de Análise (ETL):
 
-    Executar o Pipeline de Análise (ETL):
-    Bash
-
+```bash
     python scripts/analise_escola.py
+```
 
-    Iniciar o Dashboard:
-    Bash
+Iniciar o Dashboard:
 
+```bash
     streamlit run scripts/dashboard.py
+```
 
 📈 Tecnologias Utilizadas
 
-    Linguagem: Python 3.14
+Linguagem: Python 3.14
 
-    Banco de Dados: PostgreSQL
+Banco de Dados: PostgreSQL
 
-    Bibliotecas: Pandas, SQLAlchemy, Plotly, Streamlit.
+Bibliotecas: Pandas, SQLAlchemy, Plotly, Streamlit.
 
 ---
 
