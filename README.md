@@ -78,4 +78,5 @@ Abaixo está a representação da arquitetura do pipeline, desde a ingestão dos
 
 ## 📊 DataSchoolAnalyzer Execution
 Confira abaixo a demonstração do dashboard interativo e os filtros em funcionamento:
-https://github.com/rogerrgab/DataEngProject/blob/main/assets/DataSchoolAnalyzer.mp4
+
+![Demonstração do Dashboard](assets/DataSchoolAnalyzer.gif)
