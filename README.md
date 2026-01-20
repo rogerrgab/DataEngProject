@@ -1,35 +1,75 @@
-# 📊 DataSchoolAnalyzer - Projeto Extensionista
+# 📊 DataSchoolAnalyzer: Pipeline de Engenharia de Dados
 
-Este projeto automatiza o monitoramento e a análise da inclusão digital em escolas públicas.
+Este projeto foi desenvolvido como **Atividade Extensionista I** para o curso de Ciência da Computação. O objetivo é monitorar a qualidade educacional e identificar disparidades de inclusão digital através de um pipeline de dados automatizado.
 
-## 🚀 Como instalar e rodar (Windows, Debian, Ubuntu, Mint, Fedora)
+## 🏗️ Estrutura do Projeto
+- **Ingestão:** `popular_banco.py` (Cria e popula o banco de dados).
+- **Processamento (ETL):** `analise_escola.py` (Transforma dados brutos em indicadores).
+- **Visualização:** `dashboard.py` (Painel interativo em Streamlit).
 
-Siga os passos abaixo para instalar todas as dependências com um único comando:
+---
 
-### 1. Instalar Bibliotecas do Python
-Abra o seu terminal (CMD, PowerShell ou Terminal Linux) e rode:
-```bash
-pip install -r requirements.txt```
+## 🛠️ Pré-requisitos
+1. **PostgreSQL** instalado e rodando.
+2. Acesso ao banco com as credenciais configuradas nos scripts.
+3. Criar o banco de dados manualmente uma única vez:
+   ```sql
+   CREATE DATABASE db_escola;
+   ```
 
-### 2. Configurar o Banco de Dados
-Certifique-se de que o PostgreSQL está rodando e que você criou o banco db_escola
+🚀 Como Executar
+Opção A: Execução Automática (Recomendado)
 
-### 3. Executar o Pipeline
+Se você já tem o Python e o PostgreSQL configurados, basta rodar o script de setup correspondente ao seu sistema:
 
-Rode os scripts(terminal Linux/Windows/VSCode) na ordem exata para processar os dados:
+    Linux (Fedora/Debian/Ubuntu/Mint):
+    Bash
 
-    python3 popular_banco.py (Gera 25 alunos e notas)
+    chmod +x setup_linux.sh
+    ./setup_linux.sh
 
-    python3 analise_escola.py (Faz o ETL e processa indicadores)
+    Windows: Execute o arquivo setup_windows.bat com um clique duplo.
 
-    streamlit run dashboard.py (Abre o painel interativo)
+Opção B: Execução Manual (Passo a Passo)
 
-###Ou então se quiser rodar os scripts .py na pasta raíz(root) sem estar dentro da pasta scripts/, faça o seguinte:
-# Para popular o banco
-python scripts/popular_banco.py
+    Instalar Dependências:
+    Bash
 
-# Para rodar o ETL
-python scripts/analise_escola.py
+    pip install -r requirements.txt
 
-# Para abrir o Dashboard
-streamlit run scripts/dashboard.py
+    Popular o Banco de Dados:
+    Bash
+
+    python scripts/popular_banco.py
+
+    Executar o Pipeline de Análise (ETL):
+    Bash
+
+    python scripts/analise_escola.py
+
+    Iniciar o Dashboard:
+    Bash
+
+    streamlit run scripts/dashboard.py
+
+📈 Tecnologias Utilizadas
+
+    Linguagem: Python 3.14
+
+    Banco de Dados: PostgreSQL
+
+    Bibliotecas: Pandas, SQLAlchemy, Plotly, Streamlit.
+
+---
+
+## 🏗️ Data Architecture
+Abaixo está a representação da arquitetura do pipeline, desde a ingestão dos dados brutos e ETL até a camada de análise.
+
+![Arquitetura do Projeto](assets/DataDesignArchitecture.png)
+
+---
+
+## 📊 DataSchoolAnalyzer Execution
+Confira abaixo a demonstração do dashboard interativo e os filtros em funcionamento:
+
+[[video:video]]assets/DataSchoolAnalyzer.mp4

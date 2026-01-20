@@ -46,18 +46,18 @@ with col1:
     fig_disc = px.bar(df_filtrado, x='disciplina', y='nota', color='acesso_internet',
                       barmode='group', title="Impacto Digital por Matéria",
                       color_discrete_map={True: '#2ecc71', False: '#e74c3c'})
-    # Correção do Streamlit 2026: width='stretch'
+
     st.plotly_chart(fig_disc, width='stretch')
 
 with col2:
     st.subheader("Distribuição de Status")
-    # Correção do Plotly: color_discrete_map em vez de color_manual
+
     fig_pizza = px.pie(df_filtrado, names='status', title="Proporção de Aprovados",
                        color='status',
                        color_discrete_map={'✅ Aprovado': 'blue', '❌ Reprovado': 'red'})
     st.plotly_chart(fig_pizza, width='stretch')
 
 st.subheader("📋 Base de Dados Completa")
-# Correção do Streamlit 2026: width='stretch'
+
 st.dataframe(df_filtrado[['nome', 'disciplina', 'nota',
              'status', 'acesso_internet']], width='stretch')

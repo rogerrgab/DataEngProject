@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, text
 import random
 
 engine = create_engine(
+    # OBS:Password Default: 'cyq9ZwU3UcPksLP' para ter acesso ao 'db_escola'
     'postgresql://postgres:cyq9ZwU3UcPksLP@localhost:5432/db_escola')
 
 disciplinas = ['Matemática', 'Português', 'Inglês', 'História', 'Geografia']
