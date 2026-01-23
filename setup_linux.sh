@@ -26,4 +26,4 @@ echo "⚙️ Executando Transformação (ETL)..."
 
 # 5. Abrir o Dashboard
 echo "📊 Abrindo o Dashboard..."
-./venv/bin/streamlit run main.py
+./venv/bin/streamlit run dashboard.py
